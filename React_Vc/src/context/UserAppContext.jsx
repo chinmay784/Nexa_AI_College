@@ -13,7 +13,7 @@ const UserAppProvider = ({ children }) => {
     // Function to fetch user profile
     const fetchUserProfile = async (token) => {
         try {
-            const response = await axios.get(`http://localhost:4000/api/auth/profile`, {
+            const response = await axios.get(`https://nexa-ai-college.onrender.com/api/auth/profile`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setUser(response.data);
