@@ -1,0 +1,8 @@
+.Link{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+}
+nav{
+  backdrop-filter: blur(10px);
+}
+
