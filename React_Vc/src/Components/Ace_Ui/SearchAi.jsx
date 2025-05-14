@@ -33,7 +33,7 @@ const SearchAi = () => {
       event.preventDefault(); // Prevents form submission (if inside a form)
       setLoading(false)
       try {
-        const res = await axios.post(`http://localhost:4000/api/chat/search`,
+        const res = await axios.post(`https://nexa-ai-college.onrender.com/api/chat/search`,
           { prompt },
           { headers: { Authorization: `Bearer ${token}` } }
         )
@@ -54,7 +54,7 @@ const SearchAi = () => {
     }
     setLoading(false)
     try {
-      const res = await axios.post(`http://localhost:4000/api/chat/search`,
+      const res = await axios.post(`https://nexa-ai-college.onrender.com/api/chat/search`,
         { prompt },
         { headers: { Authorization: `Bearer ${token}` } }
       )
@@ -70,7 +70,7 @@ const SearchAi = () => {
 
   const FeathAllAiSearch = async () => {
     try {
-      const res = await axios.get(`http://localhost:4000/api/chat/allsearch`, {
+      const res = await axios.get(`https://nexa-ai-college.onrender.com/api/chat/allsearch`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       console.log(res.data.searches)
@@ -85,7 +85,7 @@ const SearchAi = () => {
 
   const DeleteHandler = async (qId) => {
     try {
-      const res = await axios.delete(`http://localhost:4000/api/chat/${user._id}/query/${qId}`)
+      const res = await axios.delete(`https://nexa-ai-college.onrender.com/api/chat/${user._id}/query/${qId}`)
       console.log(res.data)
       setData(res.data);
       toast.success("Query Deleted")

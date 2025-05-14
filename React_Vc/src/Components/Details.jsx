@@ -17,7 +17,7 @@ const Details = () => {
 
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/api/chat/${user._id}/query/${id}`);
+        const response = await axios.get(`https://nexa-ai-college.onrender.com/api/chat/${user._id}/query/${id}`);
         setData(response.data);
       } catch (err) {
         setError("Failed to load data. Please try again.");

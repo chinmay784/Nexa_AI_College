@@ -15,7 +15,7 @@ const PassWordSet = () => {
     const handleContinue = async () => {
         setLoading(false)
         try {
-            await axios.post(`http://localhost:4000/api/auth/reset-password`, { email, otp, newPassword });
+            await axios.post(`https://nexa-ai-college.onrender.com/api/auth/reset-password`, { email, otp, newPassword });
             toast.success("Password reset Sucessfully");
             navigate("/login")
         } catch (error) {

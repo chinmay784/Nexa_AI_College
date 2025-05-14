@@ -51,7 +51,7 @@ function Otp() {
     }
 
     try {
-      const response = await axios.post(`http://localhost:4000/api/auth/verify-otp`, { email, otp: otpString });
+      const response = await axios.post(`https://nexa-ai-college.onrender.com/api/auth/verify-otp`, { email, otp: otpString });
 
       toast.success("OTP verified successfully!");
       setTimeout(() => {

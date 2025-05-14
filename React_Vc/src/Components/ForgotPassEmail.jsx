@@ -14,7 +14,7 @@ const ForgotPassEmail = () => {
         // Add password reset logic here
         setLoading(false)
         try {
-            await axios.post(`http://localhost:4000/api/auth/request-password-reset`, { email });
+            await axios.post(`https://nexa-ai-college.onrender.com/api/auth/request-password-reset`, { email });
             toast.success("Please check your email.");
             navigate("/reset-password")
         } catch (error) {

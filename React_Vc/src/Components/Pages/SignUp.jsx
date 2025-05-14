@@ -20,7 +20,7 @@ function SignUp() {
     setError("");
     setLoading(false)
     try {
-      const res = await axios.post(`http://localhost:4000/api/auth/signup`, { name, email, phone, password })
+      const res = await axios.post(`https://nexa-ai-college.onrender.com/api/auth/signup`, { name, email, phone, password })
       console.log(res.data.token)
       login(res.data.token, res.data.user)
       navigate('/verify-otp', { state: { email } })

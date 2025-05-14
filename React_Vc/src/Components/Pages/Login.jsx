@@ -16,7 +16,7 @@ const Login = () => {
     event.preventDefault();
     setLoading(false)
     try {
-      const res = await axios.post('http://localhost:4000/api/auth/login', { email, password })
+      const res = await axios.post('https://nexa-ai-college.onrender.com/api/auth/login', { email, password })
       console.log(res.data.token)
       login(res.data.token, res.data.user);
       navigate("/");
