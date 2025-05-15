@@ -175,11 +175,14 @@ const SearchAi = () => {
 
 
 
-        <div className='mt-8 w-2/3 text-left'> {/* Added margin-top and width for better readability */}
-          {
-            response && <pre className="bg-gray-800 p-4 rounded-md whitespace-pre-wrap">{response}</pre>
-          }
+        <div className="mt-8 w-full max-w-screen-lg mx-auto text-left overflow-y-auto max-h-[80vh] px-4">
+          {response && (
+            <pre className="bg-gray-800 text-white p-4 rounded-md whitespace-pre-wrap break-words leading-relaxed text-sm sm:text-base md:text-lg">
+              {response}
+            </pre>
+          )}
         </div>
+
 
         {
           loading ? (<></>) : (<> <Loader /> </>)
